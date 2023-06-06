@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="DESCRIPTION META TAG">
+  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>ChatDB: Augmenting LLMs with Databases as Their Symbolic Memory</title>
+  <link rel="icon" type="image/x-icon" href="static/images/db.png">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">ChatDB: Augmenting LLMs with Databases as Their Symbolic Memory</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=4LzKZggAAAAJ" target="_blank">Chenxu Hu</a>,</span>
+                <span class="author-block">
+                  <a href="https://bigaidream.github.io/" target="_blank">Jie Fu</a>,</span>
+              <span class="author-block">
+                  <a href="" target="">Chenzhuang Du</a>,</span>
+              <span class="author-block">
+                  <a href="" target="">Simian Luo</a>,</span>
+              <span class="author-block">
+                  <a href="http://jakezhao.net/" target="_blank">Junbo Zhao</a>,</span>
+                  <span class="author-block">
+                    <a href="https://hangzhaomit.github.io/" target="_blank">Hang Zhao</a>
+                  </span>
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">Tsinghua University, Beijing Academy of Artificial Intelligence, Zhejiang University</span>
+
+<!--                    <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>-->
+                  </div>
+
+
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+
+
+                                      <!-- ArXiv abstract Link -->
+                      <span class="link-block">
+                        <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="ai ai-arxiv"></i>
+                        </span>
+                        <span>arXiv</span>
+                      </a>
+                    </span>
+
+                    <!-- Supplementary PDF link -->
+<!--                    <span class="link-block">-->
+<!--                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"-->
+<!--                      class="external-link button is-normal is-rounded is-dark">-->
+<!--                      <span class="icon">-->
+<!--                        <i class="fas fa-file-pdf"></i>-->
+<!--                      </span>-->
+<!--                      <span>Supplementary</span>-->
+<!--                    </a>-->
+<!--                  </span>-->
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser figure-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/teaser_crop3.png" alt="MY ALT TEXT"/>
+      <h2 class="subtitle has-text-justified">
+        Overall workflow of ChatDB.
+        The LLM controller controls the read and write operations to the memory.
+        The memory stores historical information and provides relevant historical information
+        to assist in responding to user input.
+        In ChatDB, we focus on augmenting LLMs with databases as their symbolic memory.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser figure -->
+
+
+
+<!-- Teaser video-->
+<!--<section class="hero teaser">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="hero-body">-->
+<!--      <video poster="" id="tree" autoplay controls muted loop height="100%">-->
+<!--        &lt;!&ndash; Your video here &ndash;&gt;-->
+<!--        <source src="static/videos/banner_video.mp4"-->
+<!--        type="video/mp4">-->
+<!--      </video>-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. -->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!-- End teaser video -->
+
+<!-- Paper abstract-->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Large language models (LLMs) with memory are computationally universal.
+            However, mainstream LLMs are not taking full advantage of memory, and the designs are heavily influenced by biological brains.
+            Due to their approximate nature and proneness to the accumulation of errors, conventional neural memory mechanisms cannot support LLMs to simulate complex reasoning.
+            In this paper, we seek inspiration from modern computer architectures to augment LLMs with symbolic memory for complex multi-hop reasoning.
+            Such a symbolic memory framework is instantiated as an LLM and a set of SQL databases, where the LLM generates SQL instructions to manipulate the SQL databases.
+            We validate the effectiveness of the proposed memory framework on a synthetic dataset requiring complex reasoning.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract-->
+
+<!-- A section -->
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!-- A subsection -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Memory limitations of large language models</h2>
+        <div class="content has-text-justified">
+          <p>
+            While large language models get more capable in language organization and knowledge reasoning,
+            one of their main issues is handling long contexts, e.g., GPT-4 works with 32K sequence length,
+            and Claude works with 100K. This is a practical issue while chaining LLMs into software applications
+            for daily and industrial applications: as a personal chatbot, it forgets about your preferences,
+            as every day is a new day for an LLM; as a business analytic tool, it can only process data captured
+            within a small time-window, as it fails to digest the long historical business documents.
+            Due to the distributed knowledge storage within neural networks, maintaining and manipulating neural
+            knowledge precisely and symbolically is difficult. In other words, a neural network's learning and
+            updating process is prone to error accumulation.
+          </p>
+          <p>
+            Here, we introduce <strong>ChatDB</strong>, a novel framework integrating symbolic memory with LLMs.
+            ChatDB explores ways of augmenting LLMs with symbolic memory to handle contexts of arbitrary lengths.
+            Such a symbolic memory framework is instantiated as an LLM with a set of SQL databases.
+            The LLM generates SQL instructions to manipulate the SQL databases autonomously (including insertion, selection, update, and deletion),
+            aiming to complete a complex task requiring multi-hop reasoning and long-term symbolic memory.
+            This contrasts the existing involvement of databases, where databases are considered outside
+            the whole learning system and passively store information instructed by humans.
+            In addition, the previous work mainly focused on selection operations only, and did not support insertion,
+            update, and deletion operations on the database.
+          </p>
+<!--          <p>-->
+<!--            Our experiments demonstrated that ChatDB supports precise and complex memory operations enabled by SQL statements.-->
+<!--            With the augmentation of external symbolic memory, ChatDB finds its applications in complex business scenarios, such as...-->
+<!--          </p>-->
+        </div>
+      </div>
+    </div>
+    <!-- End a subsection -->
+    <br>
+    <!-- A subsection -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">ChatDB</h2>
+        <div class="content has-text-justified">
+          <p>
+            In this section, we first describe the overall framework of our proposed ChatDB.
+            Given a user input in natural language and optional schemas of existing tables in the database
+            (not required if there are no existing tables), ChatDB aims to manipulate the symbolic memory
+            (i.e., the external database) and perform multi-hop reasoning to respond to the user's input.
+            Then, we delve into the details of the chain-of-memory, which is the crucial component of ChatDB.
+          </p>
+        </div>
+
+        <br>
+
+        <h2 class="title is-4">Framework Overview</h2>
+        
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay controls muted loop height="100%">
+          <!-- Your video here -->
+          <source src="static/videos/chatdb_pipeline.mp4"
+          type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-justified">
+          ChatDB framework.
+          The red arrow lines represent the process flow of chain-of-memory,
+          indicating the connection between multiple memory operations.
+          The red arrow lines between database tables represent the reference relationships
+          between primary keys and foreign keys, which start from primary keys to foreign keys.
+          Only the first four columns of each table are shown for brevity.
+          This example showcases the process of returning goods purchased on 2023-01-02 by a customer
+          with the phone number 823451.
+        </h2>
+      </div>
+
+        <div class="content has-text-justified">
+          <p>
+            ChatDB framework consists of three main stages: input processing, chain-of-memory, and response summary.
+          </p>
+          <p>
+            In the input processing stage, ChatDB generates a series of intermediate steps to manipulate the symbolic
+            memory by utilizing LLMs if responding to the user input requires the use of memory.
+            Otherwise, we use LLMs directly to generate a response.
+          </p>
+          <p>
+            In the chain-of-memory stage, ChatDB executes a series of intermediate steps to interact with external symbolic memory.
+            ChatDB manipulates the external memory in sequence according to a series of previously generated SQL statements,
+            including operations such as insert, update, select, delete, etc. The external database executes
+            the corresponding SQL statements, updates the database, and returns the results.
+            Afterward, ChatDB decides whether to update the next operation step based on the returned results and
+            continues to execute the next step following the same procedure until all operations on the memory are completed.
+          </p>
+          <p>
+            In the response summary stage, ChatDB summarizes the final response to the user based on the results of a series of chain-of-memory steps.
+          </p>
+        </div>
+
+        <br>
+
+        <h2 class="title is-4">Chain-of-Memory</h2>
+        <div class="content has-text-justified">
+          <p>
+            The purpose of chain-of-memory is to enhance the reasoning capabilities and robustness of LLMs when manipulating symbolic memories. The approach involves converting the user's input into a sequence of intermediate memory operation steps, enabling LLMs to more accurately and effectively manipulate the memory in a symbolic way. After breaking down a complex memory operation into multiple simple steps, when executing the next step, it is necessary to integrate the results of the previous steps, determine whether the next step needs to be modified, and then perform the next step. Note that each step of SQL operation may involve single or multiple tables in the database.
+          </p>
+          <p>
+            The advantages of chain-of-memory are twofold. Firstly, it breaks down a complex memory operation into multiple simple intermediate steps, enabling LLMs to perform complex memory manipulations with higher accuracy, enhancing their multi-hop reasoning ability over symbolic memory. Secondly, by using a sequence of intermediate memory operations, chain-of-memory improves the robustness of LLMs when handling complex, multi-table manipulations. This approach enables ChatDB to handle edge cases and unexpected scenarios better, making it a promising method for complex and diverse real-world applications.
+          </p>
+        </div>
+
+
+      </div>
+    </div>
+    <!-- End a subsection -->
+
+  </div>
+</section>
+<!-- End a section -->
+
+<!-- Image carousel -->
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--       <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <img src="static/images/carousel1.jpg" alt="MY ALT TEXT"/>-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--          First image description.-->
+<!--        </h2>-->
+<!--      </div>-->
+<!--      <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <img src="static/images/carousel2.jpg" alt="MY ALT TEXT"/>-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--          Second image description.-->
+<!--        </h2>-->
+<!--      </div>-->
+<!--      <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <img src="static/images/carousel3.jpg" alt="MY ALT TEXT"/>-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--         Third image description.-->
+<!--       </h2>-->
+<!--     </div>-->
+<!--     <div class="item">-->
+<!--      &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--      <img src="static/images/carousel4.jpg" alt="MY ALT TEXT"/>-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        Fourth image description.-->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+<!-- End image carousel -->
+
+
+
+
+<!-- Youtube video -->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
+<!--      <h2 class="title is-3">Video Presentation</h2>-->
+<!--      <div class="columns is-centered has-text-centered">-->
+<!--        <div class="column is-four-fifths">-->
+<!--          -->
+<!--          <div class="publication-video">-->
+<!--            &lt;!&ndash; Youtube embed code here &ndash;&gt;-->
+<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!-- End youtube video -->
+
+
+<!-- Video carousel -->
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title is-3">Another Carousel</h2>-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--        <div class="item item-video1">-->
+<!--          <video poster="" id="video1" autoplay controls muted loop height="100%">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel1.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video2">-->
+<!--          <video poster="" id="video2" autoplay controls muted loop height="100%">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel2.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video3">-->
+<!--          <video poster="" id="video3" autoplay controls muted loop height="100%">\-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel3.mp4"-->
+<!--            type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!-- End video carousel -->
+
+
+
+
+
+
+<!-- Paper poster -->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title">Poster</h2>-->
+
+<!--      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">-->
+<!--          </iframe>-->
+<!--        -->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@article{hu2023chatdb,
+  title = {ChatDB: Augmenting LLMs with Databases as Their Symbolic Memory},
+  author = {},
+  journal={arXiv preprint arXiv:xxxx.yyyyy},
+  year = {2023},
+}</code></pre>
+    </div>
+</section>
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>.
+            You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+
+  </body>
+  </html>
